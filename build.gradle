@@ -1,0 +1,24 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.8.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+group = 'com.batchapp'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+bootJar {
+	baseName = 'service-processor'
+	version =  '0.1.0'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile("org.springframework.boot:spring-boot-starter-batch")
+	compile("org.hsqldb:hsqldb")
+	testCompile("junit:junit")
+}
